@@ -10,14 +10,15 @@ source:
   sha256: c85d85a16668b0fa53816afd7919fcdc8cd7c10f255b2dc3750e1e92758690fb
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
   skip: True  # [py<35]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - fftw
+    - openmp
   host:
     - numpy
     - pip
