@@ -29,7 +29,8 @@ requirements:
     - python
     - scikit-learn >=0.20
     - scipy
-    - pynndescent
+    - pip:
+      - pynndescent
 
 test:
   imports:
