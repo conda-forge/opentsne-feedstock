@@ -21,7 +21,6 @@ requirements:
     - numpy
     - pip
     - python
-    - fftw
     - openmp
   run:
     - {{ pin_compatible('numpy') }}
