@@ -25,10 +25,10 @@ requirements:
     - python
   run:
     - {{ pin_compatible('numpy') }}
-    - numba >=0.38.1
     - python
     - scikit-learn >=0.20
     - scipy
+    - pynndescent >=0.3
 
 test:
   imports:
