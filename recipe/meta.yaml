@@ -1,5 +1,5 @@
 {% set name = "openTSNE" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7707411578babc9619ba2d50b16386c48e2081a0d666d6a1611fa1e2fd208304
+  sha256: a6ad8104997697cdbe5c413ce0c3e3b0d1970c696fc01ebe468e1dd468c2185f
 
 build:
   number: 0
