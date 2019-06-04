@@ -10,7 +10,7 @@ source:
   sha256: 53ffd4d46c3a86a843d9a0ba0855fab91cacce0917e729aa945c9690eb606b1d
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
   skip: True  # [py<35]
 
@@ -21,7 +21,6 @@ requirements:
     - numpy
     - pip
     - python
-    - openmp
   run:
     - {{ pin_compatible('numpy') }}
     - numba >=0.38.1
