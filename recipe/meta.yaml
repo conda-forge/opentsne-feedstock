@@ -10,7 +10,7 @@ source:
   sha256: a276493ee14cce59642ba966b5b0d0cf0952c11a3e70647580939208cd6a93bd
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
   skip: True  # [py<35]
 
@@ -18,7 +18,7 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - numpy
+    - numpy ==1.14.6
     - pip
     - python
   run:
