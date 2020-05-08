@@ -1,5 +1,5 @@
 {% set name = "openTSNE" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 253698f39242af883cc79f6e6764f311c4e988a0f3c5e4c7a49e9ce0851d2694
+  sha256: 66128744219e5ef6c6b4c9309285158a63ef88e4f57b023427a8d7181e79df50
 
 build:
   number: 0
@@ -16,18 +16,16 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - numpy ==1.14.6
     - pip
     - python
   run:
     - {{ pin_compatible('numpy') }}
-    - numba >=0.38.1
     - python
     - scikit-learn >=0.20
     - scipy
-    - python-annoy
 
 test:
   imports:
