@@ -18,9 +18,12 @@ requirements:
   build:
     - {{ compiler('cxx') }}
   host:
-    - numpy
     - pip
     - python
+    - setuptools
+    - wheel
+    - cython
+    - {{ pin_compatible('numpy') }}
   run:
     - {{ pin_compatible('numpy') }}
     - python
