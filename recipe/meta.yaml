@@ -27,9 +27,9 @@ requirements:
     - setuptools
     - wheel
     - cython
-    - {{ pin_compatible('numpy') }}
+    - bumpy
   run:
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - python
     - scikit-learn >=0.20
     - scipy
