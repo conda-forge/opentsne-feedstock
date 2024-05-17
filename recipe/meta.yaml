@@ -10,7 +10,7 @@ source:
   sha256: 51f4dffaa3366ee4a480dd21d5f64eb0fa677248a0c99490aeb8bf311124368c
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   skip: true  # [py<35]
 
@@ -21,6 +21,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python
@@ -30,7 +31,6 @@ requirements:
     - numpy
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - scikit-learn >=0.20
     - scipy
 
